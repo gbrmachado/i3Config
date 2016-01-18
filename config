@@ -89,6 +89,8 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
+workspace 0 output HDMI1
+
 # switch to workspace
 bindsym $mod+1 workspace 1:firefox
 bindsym $mod+2 workspace 2:file
@@ -99,7 +101,7 @@ bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8:skype
 bindsym $mod+9 workspace 9:game
-bindsym $mod+0 workspace 0:irc
+bindsym $mod+0 workspace 0:Monitor
 
 # switch next and previous workspace
 
@@ -116,7 +118,7 @@ bindsym $mod+Shift+6 move container to workspace 6
 bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8:skype
 bindsym $mod+Shift+9 move container to workspace 9:game
-bindsym $mod+Shift+0 move container to workspace 0:irc
+bindsym $mod+Shift+0 move container to workspace 0:Monitor
 
 ## Programs
 #exec --no-startup-id i3-msg 'workspace 0:irc; exec /usr/bin/hexchat'
@@ -131,13 +133,16 @@ exec xrandr --dpi 124
 exec --no-startup-id feh --bg-fill /media/Multimedia/Dropbox/Wallpaper/eja7tgH.jpg
 #exec --no-startup-id i3-msg 'workspace 8:skype; exec skype'
 #exec --no-startup-id i3-msg 'workspace 9:game; exec steam'
-#exec --no-startup-id i3-msg 'exec megasync'
-#exec --no-startup-id i3-msg 'exec /opt/copy-client/CopyAgent'
+exec --no-startup-id i3-msg 'exec megasync'
+exec --no-startup-id i3-msg 'exec /opt/copy-client/CopyAgent'
 ## Multimedia Keys
 
-# Screen brightness controls
+### Screen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 15     # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 15   # decrease screen brightness
+
+bindsym $mod+Control+Up exec xbacklight -inc 15     # increase screen brightness
+bindsym $mod+Control+Down exec xbacklight -dec 15   # decrease screen brightness
 
 # Media Players Controls# Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master 5%+
@@ -152,6 +157,12 @@ bindsym $mod+Print exec ~/.local/bin/escrotum -s ~/Pictures/screenshots/%Y-%m-%d
 bindsym $mod+Shift+b exec setxkbmap -model abnt2 -layout br
 bindsym $mod+Shift+g exec setxkbmap -layout gb
  
+### DUAL MONITORS
+#Move the current workspace to the next output
+
+#halt external monitor
+bindsym $mod+o exec --no-startup-id xrandr --output HDMI1 --off 
+bindsym $mod+p exec --no-startup-id xrandr --output HDMI1 --auto --left-of eDP1
 
 
 # reload the configuration file
