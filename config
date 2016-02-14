@@ -134,7 +134,6 @@ exec --no-startup-id feh --bg-fill /media/Multimedia/Dropbox/Wallpaper/eja7tgH.j
 #exec --no-startup-id i3-msg 'workspace 8:skype; exec skype'
 #exec --no-startup-id i3-msg 'workspace 9:game; exec steam'
 exec --no-startup-id i3-msg 'exec megasync'
-exec --no-startup-id i3-msg 'exec /opt/copy-client/CopyAgent'
 ## Multimedia Keys
 
 ### Screen brightness controls
