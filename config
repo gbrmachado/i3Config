@@ -123,7 +123,7 @@ bindsym $mod+Shift+0 move container to workspace 0:Monitor
 ## Programs
 #exec --no-startup-id i3-msg 'workspace 0:irc; exec /usr/bin/hexchat'
 exec --no-startup-id i3-msg 'workspace 1:firefox; exec /usr/bin/firefox'
-exec --no-startup-id i3-msg 'workspace 2:file; exec pcmanfm'
+exec --no-startup-id i3-msg 'workspace 2:file; exec nautilus'
 exec --no-startup-id nm-applet
 exec --no-startup-id blueman-applet
 exec --no-startup-id pa-applet 
@@ -163,6 +163,7 @@ bindsym $mod+Shift+g exec setxkbmap -layout gb
 bindsym $mod+o exec --no-startup-id xrandr --output HDMI1 --off 
 bindsym $mod+p exec --no-startup-id xrandr --output HDMI1 --auto --left-of eDP1
 
+#bindsym $mod+p exec --no-startup-id xrandr --output DP1 --auto --left-of eDP1
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
