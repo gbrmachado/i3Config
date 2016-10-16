@@ -92,7 +92,7 @@ bindsym $mod+a focus parent
 workspace 0 output HDMI1
 
 # switch to workspace
-bindsym $mod+1 workspace 1:firefox
+bindsym $mod+1 workspace 1:Navegador
 bindsym $mod+2 workspace 2:file
 bindsym $mod+3 workspace 3:terminal
 bindsym $mod+4 workspace 4:editor
@@ -109,7 +109,7 @@ bindsym $mod+Left workspace prev
 bindsym $mod+Right workspace next
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1:firefox
+bindsym $mod+Shift+1 move container to workspace 1:Navegador
 bindsym $mod+Shift+2 move container to workspace 2:file
 bindsym $mod+Shift+3 move container to workspace 3:terminal
 bindsym $mod+Shift+4 move container to workspace 4:editor
@@ -122,7 +122,6 @@ bindsym $mod+Shift+0 move container to workspace 0:Monitor
 
 ## Programs
 #exec --no-startup-id i3-msg 'workspace 0:irc; exec /usr/bin/hexchat'
-exec --no-startup-id i3-msg 'workspace 1:firefox; exec /usr/bin/firefox'
 exec --no-startup-id i3-msg 'workspace 2:file; exec nautilus'
 exec --no-startup-id nm-applet
 exec --no-startup-id blueman-applet
@@ -133,7 +132,7 @@ exec xrandr --dpi 124
 exec --no-startup-id feh --bg-fill /media/Multimedia/Dropbox/Wallpaper/eja7tgH.jpg
 #exec --no-startup-id i3-msg 'workspace 8:skype; exec skype'
 #exec --no-startup-id i3-msg 'workspace 9:game; exec steam'
-exec --no-startup-id i3-msg 'exec megasync'
+# exec --no-startup-id i3-msg 'exec megasync'
 ## Multimedia Keys
 
 ### Screen brightness controls
@@ -153,8 +152,7 @@ bindsym Print exec ~/.local/bin/escrotum ~/Pictures/screenshots/%Y-%m-%d-%T-scre
 bindsym $mod+Print exec ~/.local/bin/escrotum -s ~/Pictures/screenshots/%Y-%m-%d-%T-screenshot.png 
 
 # Keyboard settings
-bindsym $mod+Shift+b exec setxkbmap -model abnt2 -layout br
-bindsym $mod+Shift+g exec setxkbmap -layout gb
+# bindsym $mod+Shift+b exec setxkbmap -model abnt2 -layout br
  
 ### DUAL MONITORS
 #Move the current workspace to the next output
