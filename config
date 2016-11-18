@@ -129,7 +129,7 @@ exec --no-startup-id pa-applet
 exec --no-startup-id dropbox start
 exec --no-startup-id parcellite
 exec xrandr --dpi 124
-exec --no-startup-id feh --bg-fill /media/Multimedia/Dropbox/Wallpaper/eja7tgH.jpg
+#exec --no-startup-id feh --bg-fill /media/Multimedia/Dropbox/Wallpaper/eja7tgH.jpg
 #exec --no-startup-id i3-msg 'workspace 8:skype; exec skype'
 #exec --no-startup-id i3-msg 'workspace 9:game; exec steam'
 # exec --no-startup-id i3-msg 'exec megasync'
@@ -148,8 +148,8 @@ bindsym XF86AudioLowerVolume exec --no-startup-id amixer -D pulse sset Master 5%
 bindsym XF86AudioMute exec --no-startup-id amixer -D pulse set Master 1+ toggle
 
 # Print Screen Controls
-bindsym Print exec /usr/local/bin/escrotum ~/Pictures/screenshots/%Y-%m-%d-%T-screenshot.png
-bindsym $mod+Print exec /usr/local/bin/escrotum -s ~/Pictures/screenshots/%Y-%m-%d-%T-screenshot.png 
+bindsym Print exec ~/.local/bin/escrotum ~/Pictures/screenshots/%Y-%m-%d-%T-screenshot.png
+bindsym $mod+Print exec ~/.local/bin/escrotum -s ~/Pictures/screenshots/%Y-%m-%d-%T-screenshot.png 
 
 # Keyboard settings
 # bindsym $mod+Shift+b exec setxkbmap -model abnt2 -layout br
@@ -206,6 +206,6 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         position bottom 
-        status_command i3status -c ~/.i3/i3status.conf
+        status_command i3status -c ~/.config/i3/i3status.conf
 
 }
