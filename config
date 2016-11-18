@@ -89,7 +89,7 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
-workspace 0 output HDMI1
+workspace 0 output HDMI-1
 
 # switch to workspace
 bindsym $mod+1 workspace 1:Navegador
@@ -151,17 +151,12 @@ bindsym XF86AudioMute exec --no-startup-id amixer -D pulse set Master 1+ toggle
 bindsym Print exec ~/.local/bin/escrotum ~/Pictures/screenshots/%Y-%m-%d-%T-screenshot.png
 bindsym $mod+Print exec ~/.local/bin/escrotum -s ~/Pictures/screenshots/%Y-%m-%d-%T-screenshot.png 
 
-# Keyboard settings
-# bindsym $mod+Shift+b exec setxkbmap -model abnt2 -layout br
- 
 ### DUAL MONITORS
 #Move the current workspace to the next output
 
 #halt external monitor
-bindsym $mod+o exec --no-startup-id xrandr --output HDMI1 --off 
-bindsym $mod+p exec --no-startup-id xrandr --output HDMI1 --auto --left-of eDP1
-
-#bindsym $mod+p exec --no-startup-id xrandr --output DP1 --auto --left-of eDP1
+bindsym $mod+o exec --no-startup-id xrandr --output HDMI-1 --off 
+bindsym $mod+p exec --no-startup-id xrandr --output HDMI-1 --auto --left-of eDP-1
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
