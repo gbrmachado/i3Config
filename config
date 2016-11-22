@@ -148,8 +148,8 @@ bindsym XF86AudioLowerVolume exec --no-startup-id amixer -D pulse sset Master 5%
 bindsym XF86AudioMute exec --no-startup-id amixer -D pulse set Master 1+ toggle
 
 # Print Screen Controls
-bindsym Print exec ~/.local/bin/escrotum ~/Pictures/screenshots/%Y-%m-%d-%T-screenshot.png
-bindsym $mod+Print exec ~/.local/bin/escrotum -s ~/Pictures/screenshots/%Y-%m-%d-%T-screenshot.png 
+bindsym Print exec ~/.local/bin/escrotum ~/Imagens/screenshots/%Y-%m-%d-%T-screenshot.png
+bindsym $mod+Print exec ~/.local/bin/escrotum -s ~/Imagens/screenshots/%Y-%m-%d-%T-screenshot.png 
 
 ### DUAL MONITORS
 #Move the current workspace to the next output
